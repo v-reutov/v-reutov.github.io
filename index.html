@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html>
-<script src="http://www.w3schools.com/lib/w3data.js"></script>
+  <head>
+    <title>get_started</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<body>
-
-<div>ִנאסüעו</div>
-<div w3-include-html="/build/web/index.html"></div> 
-
-<script>
-w3IncludeHTML();
-</script>
-
-</body>
+    <script defer src="build/web/main.dart" type="application/dart"></script>
+    <script defer src="build/web/packages/browser/dart.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+      body {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 5vw;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
 </html>
