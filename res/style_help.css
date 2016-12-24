@@ -1,0 +1,20 @@
+body {
+    background-color: #f1f1f1;
+    padding: 5vw;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
+
+a { color: #4183c4; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+#suggestions {
+    margin-top: 35px;
+    color: #ccc;
+}
+#suggestions a {
+    color: #666666;
+    font-weight: 200;
+    font-size: 14px;
+    margin: 0 10px;
+}
