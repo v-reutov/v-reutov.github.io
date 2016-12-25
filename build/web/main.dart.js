@@ -50972,8 +50972,68 @@
     }
   }], ["", "package:get_started/app_component.dart",, Q, {
     "^": "",
+    buildNames: function() {
+      return new P._SyncStarIterable$(function() {
+        var $async$goto = 0, $async$handler = 1, $async$currentError, prefixes, suffixes, _i, prefix, _i0;
+        return function $async$buildNames($async$errorCode, $async$result) {
+          if ($async$errorCode === 1) {
+            $async$currentError = $async$result;
+            $async$goto = $async$handler;
+          }
+          while (true)
+            switch ($async$goto) {
+              case 0:
+                // Function start
+                prefixes = ["Super", "Mega", "Ultra"];
+                suffixes = ["man", "woman", "boy", "girl"];
+                _i = 0;
+              case 2:
+                // for condition
+                if (!(_i < 3)) {
+                  // goto after for
+                  $async$goto = 4;
+                  break;
+                }
+                prefix = prefixes[_i];
+                _i0 = 0;
+              case 5:
+                // for condition
+                if (!(_i0 < 4)) {
+                  // goto after for
+                  $async$goto = 7;
+                  break;
+                }
+                $async$goto = 8;
+                return prefix + suffixes[_i0];
+              case 8:
+                // after yield
+              case 6:
+                // for update
+                ++_i0;
+                // goto for condition
+                $async$goto = 5;
+                break;
+              case 7:
+                // after for
+              case 3:
+                // for update
+                ++_i;
+                // goto for condition
+                $async$goto = 2;
+                break;
+              case 4:
+                // after for
+                // implicit return
+                return P._IterationMarker_endOfIteration();
+              case 1:
+                // rethrow
+                return P._IterationMarker_uncaughtError($async$currentError);
+            }
+        };
+      });
+    },
     AppComponent: {
-      "^": "Object;"
+      "^": "Object;heroes"
     }
   }], ["", "package:get_started/app_component.template.dart",, V, {
     "^": "",
@@ -51177,12 +51237,12 @@
         t1 = J.getInterceptor$x(parentRenderNode);
         t1.append$1(parentRenderNode, this._app_component_template$_el_0);
         this.dbgElm$4(this._app_component_template$_el_0, 0, 0, 0);
-        _text_1 = doc.createTextNode("My First AngularDart App");
+        _text_1 = doc.createTextNode("My Project Homepage");
         this._app_component_template$_el_0.appendChild(_text_1);
         this.dbgElm$4(_text_1, 1, 0, 4);
         _text_2 = doc.createTextNode("\n\n");
         t1.append$1(parentRenderNode, _text_2);
-        this.dbgElm$4(_text_2, 2, 0, 33);
+        this.dbgElm$4(_text_2, 2, 0, 28);
         t3 = doc.createElement("material-input");
         this._app_component_template$_el_3 = t3;
         t3.setAttribute(t2._contentAttr, "");
@@ -51241,7 +51301,7 @@
         t4 = this._app_component_template$_appEl_6;
         t4.component = t3;
         t4.componentView = compView_6;
-        _text_7 = doc.createTextNode("\n    Say Hello\n");
+        _text_7 = doc.createTextNode("\n    Get Started\n");
         this.dbgElm$4(_text_7, 7, 10, 30);
         compView_6.createComp$2([[_text_7]], null);
         _text_8 = doc.createTextNode("\n\n");
@@ -51900,7 +51960,8 @@
         compView_0 = new V.ViewAppComponent0(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, t4, t4, t4, t4, t4, t4, t4, t4, t4, t4, C.List_GuN, null, C.Type_ViewAppComponent0_ALf, t3, C.ViewType_1, t5, t1, t2, C.ChangeDetectionStrategy_2, false, null, null, null, H.setRuntimeTypeInfo([], [{func: 1, v: true}]), null, [], [], null, null, C.ChangeDetectorState_0, null, null, false, null);
         compView_0.AppView$7(C.Type_ViewAppComponent0_ALf, t3, C.ViewType_1, t5, t1, t2, C.ChangeDetectionStrategy_2, t6);
         compView_0.DebugAppView$8(C.Type_ViewAppComponent0_ALf, t3, C.ViewType_1, t5, t1, t2, C.ChangeDetectionStrategy_2, C.List_GuN, t6);
-        t6 = new Q.AppComponent();
+        t6 = Q.buildNames();
+        t6 = new Q.AppComponent(P.List_List$from(t6, true, H.getRuntimeTypeArgument(t6, "Iterable", 0)));
         this._AppComponent_0_3 = t6;
         t2 = this._app_component_template$_appEl_0;
         t2.component = t6;
@@ -51970,7 +52031,8 @@
     initReflector_closure: {
       "^": "Closure:1;",
       call$0: [function() {
-        return new Q.AppComponent();
+        var t1 = Q.buildNames();
+        return new Q.AppComponent(P.List_List$from(t1, true, H.getRuntimeTypeArgument(t1, "Iterable", 0)));
       }, null, null, 0, 0, null, "call"]
     }
   }], ["", "package:get_started/hello_dialog/hello_dialog.dart",, T, {
@@ -52082,13 +52144,13 @@
         t4.setAttribute(t2._contentAttr, "");
         this._hello_dialog_template$_el_7.appendChild(this._hello_dialog_template$_el_9);
         this.dbgElm$4(this._hello_dialog_template$_el_9, 9, 9, 6);
-        this._hello_dialog_template$_el_9.setAttribute("href", "https://webdev.dartlang.org/angular");
-        _text_10 = doc.createTextNode("webdev.dartlang.org/angular");
+        this._hello_dialog_template$_el_9.setAttribute("href", "https://v-reutov.github.io/secretpage.html");
+        _text_10 = doc.createTextNode("page that doesn't exist");
         this._hello_dialog_template$_el_9.appendChild(_text_10);
-        this.dbgElm$4(_text_10, 10, 9, 52);
+        this.dbgElm$4(_text_10, 10, 9, 59);
         _text_11 = doc.createTextNode(".\n    ");
         this._hello_dialog_template$_el_7.appendChild(_text_11);
-        this.dbgElm$4(_text_11, 11, 9, 83);
+        this.dbgElm$4(_text_11, 11, 9, 86);
         _text_12 = doc.createTextNode("\n\n    ");
         this.dbgElm$4(_text_12, 12, 10, 8);
         t4 = doc.createElement("div");

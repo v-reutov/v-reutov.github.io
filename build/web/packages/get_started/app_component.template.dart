@@ -247,12 +247,12 @@ class ViewAppComponent0 extends DebugAppView<import26.AppComponent> {
     _el_0.setAttribute(shimCAttr,'');
     parentRenderNode.append(_el_0);
     dbgElm(_el_0,0,0,0);
-    Text _text_1 = new Text('My First AngularDart App');
+    Text _text_1 = new Text('My Project Homepage');
     _el_0.append(_text_1);
     dbgElm(_text_1,1,0,4);
     Text _text_2 = new Text('\n\n');
     parentRenderNode.append(_text_2);
-    dbgElm(_text_2,2,0,33);
+    dbgElm(_text_2,2,0,28);
     _el_3 = doc.createElement('material-input');
     _el_3.setAttribute(shimCAttr,'');
     parentRenderNode.append(_el_3);
@@ -290,7 +290,7 @@ class ViewAppComponent0 extends DebugAppView<import26.AppComponent> {
     _AcxDarkTheme_6_3 = new import9.AcxDarkTheme(this.parentInjector.get(import45.darkThemeToken,null));
     _MaterialButtonComponent_6_4 = new import10.MaterialButtonComponent(new ElementRef(_el_6),_AcxDarkTheme_6_3,compView_6.ref);
     _appEl_6.initComponent(_MaterialButtonComponent_6_4,compView_6);
-    Text _text_7 = new Text('\n    Say Hello\n');
+    Text _text_7 = new Text('\n    Get Started\n');
     dbgElm(_text_7,7,10,30);
     compView_6.createComp([[_text_7]],null);
     Text _text_8 = new Text('\n\n');

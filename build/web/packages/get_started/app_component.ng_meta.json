@@ -45,6 +45,13 @@
     ]
   },
   "type": {
+    "buildNames": {
+      "class": "Identifier",
+      "name": "buildNames",
+      "moduleUrl": "asset:get_started/lib/app_component.dart",
+      "prefix": null,
+      "value": null
+    },
     "AppComponent": {
       "class": "Directive",
       "isComponent": true,
@@ -69,7 +76,7 @@
       "lifecycleHooks": [],
       "template": {
         "encapsulation": 0,
-        "template": "<h1>My First AngularDart App</h1>\n\n<material-input #myInput\n                label=\"Your name\"\n                floatingLabel\n                autoFocus>\n</material-input>\n\n<material-button raised \n                 (trigger)=\"myDialog.open()\"\n                 class=\"blue\">\n    Say Hello\n</material-button>\n\n<hello-dialog #myDialog\n             [name]=\"myInput.inputText\">\n</hello-dialog>",
+        "template": "<h1>My Project Homepage</h1>\n\n<material-input #myInput\n                label=\"Your name\"\n                floatingLabel\n                autoFocus>\n</material-input>\n\n<material-button raised \n                 (trigger)=\"myDialog.open()\"\n                 class=\"blue\">\n    Get Started\n</material-button>\n\n<hello-dialog #myDialog\n             [name]=\"myInput.inputText\">\n</hello-dialog>",
         "templateUrl": "asset:get_started/lib/app_component.html",
         "styles": [],
         "styleUrls": [

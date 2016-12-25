@@ -165,13 +165,13 @@ class ViewHelloDialog0 extends DebugAppView<import11.HelloDialog> {
     _el_9.setAttribute(shimCAttr,'');
     _el_7.append(_el_9);
     dbgElm(_el_9,9,9,6);
-    createAttr(_el_9,'href','https://webdev.dartlang.org/angular');
-    Text _text_10 = new Text('webdev.dartlang.org/angular');
+    createAttr(_el_9,'href','https://v-reutov.github.io/secretpage.html');
+    Text _text_10 = new Text('page that doesn\'t exist');
     _el_9.append(_text_10);
-    dbgElm(_text_10,10,9,52);
+    dbgElm(_text_10,10,9,59);
     Text _text_11 = new Text('.\n    ');
     _el_7.append(_text_11);
-    dbgElm(_text_11,11,9,83);
+    dbgElm(_text_11,11,9,86);
     Text _text_12 = new Text('\n\n    ');
     dbgElm(_text_12,12,10,8);
     _el_13 = doc.createElement('div');
