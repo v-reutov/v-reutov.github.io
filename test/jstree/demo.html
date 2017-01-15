@@ -1,69 +1,70 @@
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>jsTree test</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+  <style>
+    .jstree li.jstree-open > a.jstree-anchor > i.jstree-checkbox, 
+    .jstree li.jstree-closed > a.jstree-anchor > i.jstree-checkbox { display:none; }
+  </style>
 </head>
 <body>
-  <div id="jstree">
-    <ul>
-      <li>Ресурсы
-        <ul>
-          <li>Текст
-            <ul>
-              <li>Инструкция "Мясорубка"</li>
-              <li>Инструкция "ПК"</li>
-            </ul>
-          </li>
-          <li>Видео
-            <ul>
-              <li>Сборка мясорубки</li>
-              <li>Сборка ПК</li>
-            </ul>
-          </li>
-          <li>Онтологии</li>
-        </ul>
-      </li>
-      <li>Используемые методы
-        <ul>
-          <li>Методы обработки текста
-            <ul>
-              <li>Метод т1</li>
-            </ul>
-          </li>
-          <li>Методы обработки видео
-            <ul>
-              <li>Метод в1</li>
-            </ul>
-          </li>
-          <li>Методы создания онтогогий
-            <ul>
-              <li>Метод о1</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
+
+  <div>
+    <button onclick="tree_expand_all();">Expand All</button>
+    <button onclick="tree_collapse_all();">Collapse All</button>
   </div>
+
+  <div id="tree" style="margin-top:1em; min-height:200px;"></div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
   <script>
-  $(function () {
-    $('#jstree').jstree({
-        "checkbox" : {
-            "keep_selected_style" : false
-        },
-        "plugins" : [ "checkbox" ]
+    $(function () {
+      $('#tree').jstree({
+          "core" : {
+            "animation" : 0,
+            "check_callback" : true,
+            "themes" : { "stripes" : true },
+            'data' : {
+              'url' : 'ajax_data.json',
+              "dataType" : "json",
+              'data' : function (node) {
+                return { 'id' : node.id };
+              }
+            }
+          },
+          "types" : {
+            "#" : {
+              "max_children" : 1,
+              "max_depth" : 4,
+              "valid_children" : ["root"]
+            },
+            "root" : {
+              "icon" : "tree_icon.png",
+              "valid_children" : ["default"]
+            },
+            "default" : {
+              "valid_children" : ["default"]
+            }
+          },
+          "checkbox" : {
+              "keep_selected_style" : false
+          },
+          "plugins" : [
+            "contextmenu", "dnd", "search",
+            "state", "types", "wholerow", "checkbox"
+          ]
+        });
     });
-    $('#jstree').on("changed.jstree", function (e, data) {
-      console.log(data.selected);
-    });
-    $('button').on('click', function () {
-      $('#jstree').jstree('select_node', 'child_node_1');
-    });
-  });
+    function tree_expand_all() {
+      $('#tree').jstree('open_all');
+    };
+    function tree_collapse_all() {
+      $('#tree').jstree('close_all');
+    };
   </script>
 </body>
 </html>
