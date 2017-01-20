@@ -1,0 +1,72 @@
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	display: inline-block;
+	outline: none;
+	position: relative;
+    text-transform: uppercase;
+    margin: 1px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+/* Pseudo elements for icons */
+.btn:before
+{
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Button 6 */
+.btn-6 {
+	color: #fff;
+	background: #226fbe;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.btn-6:active {
+	top: 2px;
+}
+
+/* Button 6a */
+.btn-6a {
+	border: 2px solid #226fbe;
+}
+
+.btn-6a:hover {
+	background: transparent;
+	color: #226fbe;
+}
+
+.btn-6e {
+	border: 2px dashed #226fbe;
+	border-radius: 15px;
+}
+
+.btn-6e:hover {
+	background: transparent;
+	color: #226fbe;
+}
